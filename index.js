@@ -43,6 +43,6 @@ app.post("/", function (req, res) {
 });
 
 //this is used to listen a specific port!
-app.listen( 3000,function () {
-	console.log("port active at 3000");
+app.listen( process.env.PORT || 5000 ,function () {
+	console.log("port active");
 });
