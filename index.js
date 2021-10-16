@@ -7,12 +7,12 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 
 //sends index.html
-app.get("/bmicalculator", function (req, res) {
+app.get("/", function (req, res) {
 	res.sendFile(__dirname + "/" + "index.html");
 });
 
 //this is used to post the data on the specific route
-app.post("/bmicalculator", function (req, res) {
+app.post("/", function (req, res) {
 	heigh = parseFloat(req.body.Height);
 	weigh = parseFloat(req.body.Weight);
 	bmi = weigh / (heigh * heigh);
